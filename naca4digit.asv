@@ -1,15 +1,9 @@
 function [X, Y, yc] = naca4digit(digits, n, closed)
 % NACA4DIGIT Coordinates of NACA 4 digit airfoil profile and camber line.
 %   NACA4DIGIT(digits, n, closed) returns the coordinates of a NACA 4 digit
-%   airfoil's nodes with leading edge at (0, 0) and trailing edge at (1, 0) 
-%   as vectors X and Y for the their x and y coordinates respectively
-%   generated clockwise using cosine spacing. Also returns the y coordinates
-%   of the airfoil's camber line as the vector yc. 
-%   digits should be the airfoil's 4 digit designation as an integer. n is 
-%   the number of panels that should be be approximated. closed is a 
-%   boolean specifying whether or not the closed camber line formula should 
-%   be used.
-
+%   airfoil with leading edge at (0, 0) and trailing edge at (1, 0) 
+%
+%
     digits = num2str(digits);
     m = str2double(digits(1)) / 100;
     p = str2double(digits(2)) / 10;
